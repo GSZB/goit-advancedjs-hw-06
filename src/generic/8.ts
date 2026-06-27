@@ -1,5 +1,5 @@
 /*
-  У вас є тип Form, який містить інформацію про форму, включаючи поле errors. 
+  У вас є тип Form, який містить інформацію про форму, включаючи поле errors.
   Ви хочете створити новий тип Params, який включає всі поля з Form, крім errors.
 */
 
@@ -18,7 +18,7 @@ type Form = {
   errors: Errors;
 };
 
-// Реалізуйте Params так, щоб унеможливити поле 'errors' з типу Form
-type Params = Form;
+// Params включає всі поля з Form, крім 'errors'
+type Params = Omit<Form, 'errors'>;
 
 export {};
